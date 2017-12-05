@@ -1,0 +1,109 @@
+@* * This template is called from the `index` template. This template * handles the rendering of the page header and body
+tags. It takes * two arguments, a `String` for the title of the page and an `Html` * object to insert into the body of the
+page. *@ @(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <title> @title</title>
+    <link href="books.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta Charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="container">
+            <header>
+                <h1>Books For School Kids
+                    <small>
+                        <abbr class="initialism">all around the world</abbr>
+                    </small>
+                </h1>
+
+
+
+                <img src="schoolboy.png" alt="schoolboy sitting" />
+                <img src="treebook.png" alt=" book tree" />
+                <img src="outdoor.png" alt="children reading without class room" />
+            </header>
+
+
+            <nav role="navigation">
+                <span class="navigation-responsive">
+
+                    <span class="bold">
+                        <a href="/"> Home</a>
+                    </span>
+                    <span class="bold">
+                        <a href="/about">About Us</a>
+                    </span>
+                    <span class="bold">
+                        <a href="/donation"> Donation</a>
+                    </span>
+                    <span class="bold">
+                        <a href="/membership">Membership</a>
+                    </span>
+                    <span class="bold">
+                        <a href="/playtime"> Play Time</a>
+                    </span>
+                    <span class="bold">
+                        <a href="https://nmaahc.si.edu/" target="_blank">My History, Your Story</a>
+                    </span>
+                    <span class="bold">
+                        <a href="/morenike">Morenike's Corner</a>
+                    </span>
+                    <span class="bold">
+                        <a href="/contact"> Contact Us</a>
+                    </span>
+            </nav>
+            <main>
+                @* And here's where we render the `Html` object containing * the page content. *@ @content
+
+
+            </main>
+
+            <footer>
+            
+            
+                <div class="blank">
+            
+            
+                    <a href="donation.html" MAKE A DONATION target="_blank">
+                        <img src="donatefunds.png" alt="Donate Funds" class="margin" />
+                    </a>
+            
+                    <a href="membership.html" BECOME A MEMBER target="_blank">
+                        <img src="member.png" alt="Membership" class="margin" />
+                    </a>
+            
+                    <img src="thankyou.png" class="margin" alt="thank you picture" />
+                    </p>
+                </div>
+            
+            
+            
+            
+            
+                <p> Please
+                    <a href="contactus.html">contact us </a> to make a difference Today!!!</p>
+                
+            </footer>
+
+
+
+
+
+</body>
+<script src="@routes.Assets.versioned(" javascripts/main.js ")" type="text/javascript"></script>
+
+</html>
